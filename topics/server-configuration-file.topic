@@ -503,8 +503,8 @@
                 <tab title="application.yaml" group-key="yaml" id="config-yaml-1">
                 <code-block lang="yaml"><![CDATA[
                     app:
-                    port: 8080
-                    host: "0.0.0.0"
+                        port: 8080
+                        host: "0.0.0.0"
                     security:
                         clientId: $CLIENT_ID
                         clientSecret: $CLIENT_SECRET

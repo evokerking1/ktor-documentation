@@ -36,8 +36,7 @@ fun Application.main(httpClient: HttpClient = applicationHttpClient) {
         oauth("auth-oauth-google") {
             // Configure oauth authentication
             urlProvider = { "http://localhost:8080/callback" }
-            providerLookup = {
-                OAuthServerSettings.OAuth2ServerSettings(
+            settings = OAuthServerSettings.OAuth2ServerSettings(
                     name = "google",
                     authorizeUrl = "https://accounts.google.com/o/oauth2/auth",
                     accessTokenUrl = "https://accounts.google.com/o/oauth2/token",
@@ -53,7 +52,6 @@ fun Application.main(httpClient: HttpClient = applicationHttpClient) {
                         }
                     }
                 )
-            }
             fallback = { cause ->
                 if (cause is OAuth2RedirectError) {
                     respondRedirect("/login-after-fallback")

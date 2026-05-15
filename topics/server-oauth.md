@@ -38,7 +38,7 @@ request the resource.
 ```kotlin
 ```
 
-{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="14,29-33,115,141-143"}
+{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="14,29-33,113,139-141"}
 
 ## OAuth authorization flow {id="flow"}
 
@@ -77,7 +77,7 @@ For example, to install an `oauth` provider with the name "auth-oauth-google" it
 ```kotlin
 ```
 
-{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="9-10,29-30,35-38,64-66,115"}
+{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="9-10,29-30,35-38,62-64,113"}
 
 ## Configure OAuth {id="configure-oauth"}
 
@@ -119,7 +119,7 @@ client instance in a server [test](server-testing.md).
 ```kotlin
 ```
 
-{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="30,115"}
+{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="30,113"}
 
 ### Step 2: Configure the OAuth provider {id="configure-oauth-provider"}
 
@@ -156,7 +156,7 @@ in [settings](#configure-oauth-provider).
 ```kotlin
 ```
 
-{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="67-71,87,114"}
+{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="65-69,85,112"}
 
 A user will see the authorization page with the level of permissions required for a Ktor application. These permissions
 depend on `defaultScopes` specified in [settings](#configure-oauth-provider).
@@ -174,7 +174,7 @@ returned by the OAuth server.
 ```kotlin
 ```
 
-{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="67-87,114"}
+{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="65-85,112"}
 
 In this example, the following actions are performed after receiving a token:
 
@@ -193,14 +193,14 @@ Create a new function called `getPersonalGreeting` which will make the request a
 ```kotlin
 ```
 
-{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="117-124"}
+{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="115-122"}
 
 Then, you can call the function within a `get` route to retrieve a user's information:
 
 ```kotlin
 ```
 
-{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="104-110"}
+{src="snippets/auth-oauth-google/src/main/kotlin/com/example/oauth/google/Application.kt" include-lines="102-108"}
 
 For the complete runnable example,
 see [auth-oauth-google](https://github.com/ktorio/ktor-documentation/tree/main/codeSnippets/snippets/auth-oauth-google). 
