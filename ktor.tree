@@ -405,6 +405,7 @@
 
     <toc-element toc-title="Releases">
         <toc-element topic="releases.md"/>
+        <toc-element topic="whats-new-350.md"/>
         <toc-element topic="whats-new-340.md"/>
         <toc-element topic="whats-new-330.md"/>
         <toc-element topic="whats-new-320.md"/>
@@ -414,7 +415,6 @@
                      accepts-web-file-names="migrating-2-2.html"/>
         <toc-element topic="migrating-3.md"/>
     </toc-element>
-    <toc-element topic="whats-new-350.md"/>
 
     <toc-element toc-title="Migrating from other frameworks">
         <toc-element topic="migration-from-express-js.topic"

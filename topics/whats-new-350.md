@@ -2,11 +2,18 @@
 
 <show-structure for="chapter,procedure" depth="2"/>
 
-_[Released: April 22, 2026](releases.md#release-details)_
+_[Released: May 15, 2026](releases.md#release-details)_
+
+Ktor 3.5.0 delivers a range of improvements across server and client. Highlights of this feature release include:
+
+* [RFC 7616 Digest authentication support](#rfc-7616-digest-auth)
+* [Root configuration data class mapping](#config-data-class-mapping)
+* [Send session cookies only when modified](#session-cookies)
+* [Custom DNS resolvers in OkHttp and Apache5 client engines](#custom-dns-resolvers)
 
 ## Ktor Server
 
-### RFC 7616 Digest authentication support
+### RFC 7616 Digest authentication support {id="rfc-7616-digest-auth"}
 
 Ktor 3.5.0 updates the [`digest` authentication provider](server-digest-auth.md) to comply with [RFC 7616](https://datatracker.ietf.org/doc/html/rfc7616),
 improving security and adding support for modern Digest features.
@@ -80,7 +87,7 @@ install(Authentication) {
 }
 ```
 
-### Root configuration data class mapping
+### Root configuration data class mapping {id="config-data-class-mapping"}
 
 `ApplicationConfig` now provides a `.getAs()` function for deserializing the entire configuration into a data class.
 
@@ -170,7 +177,7 @@ To help prevent future regressions, our JavaScript test infrastructure now targe
 >
 {style="tip"}
 
-### Send session cookies only when modified
+### Send session cookies only when modified {id="session-cookies"}
 
 Ktor 3.5.0 introduces a new option for the [Sessions](server-sessions.md) plugin that sends session data only
 when it changes (for example, the `Set-Cookie` header for cookie-based sessions).
@@ -188,7 +195,7 @@ install(Sessions) {
 
 ## Ktor Client
 
-### Custom DNS resolvers in the OkHttp and Apache5 engines
+### Custom DNS resolvers in the OkHttp and Apache5 engines {id="custom-dns-resolvers"}
 
 Ktor 3.5.0 adds first-class support for configuring custom DNS resolvers in the OkHttp and Apache5 client engines.
 
