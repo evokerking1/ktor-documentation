@@ -17,6 +17,10 @@ repositories {
     maven { url = uri("https://redirector.kotlinlang.org/maven/ktor-eap") }
 }
 
+tasks.withType<Test> {
+    useJUnitPlatform()
+}
+
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version")
     implementation("io.ktor:ktor-server-core:$ktor_version")

@@ -33,6 +33,16 @@ The following table lists details of the latest Ktor releases.
 
 <table>
 <tr><td>Version</td><td>Release Date</td><td>Highlights</td></tr>
+<tr><td>3.5.0</td><td>May 15, 2026</td><td>
+<p>
+A minor release that introduces RFC 7616 Digest authentication support, custom DNS resolver configuration for OkHttp
+and Apache5, request parameter helper functions, and other improvements across configuration, sessions, and JavaScript
+compatibility.
+For more details, see <a href="whats-new-350.md"/>.
+</p>
+<var name="version" value="3.5.0"/>
+<include from="lib.topic" element-id="release_details_link"/>
+</td></tr>
 <tr><td>3.4.3</td><td>April 22, 2026</td><td>
 <p>
 A patch release focused on stability, with fixes for OpenAPI schema inference, client engine lifecycle issues, and

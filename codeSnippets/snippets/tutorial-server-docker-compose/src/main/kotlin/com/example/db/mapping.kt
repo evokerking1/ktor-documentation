@@ -1,13 +1,12 @@
 package com.example.db
 
 import Task
-import kotlinx.coroutines.Dispatchers
-import org.jetbrains.exposed.dao.IntEntity
-import org.jetbrains.exposed.dao.IntEntityClass
-import org.jetbrains.exposed.dao.id.EntityID
-import org.jetbrains.exposed.dao.id.IntIdTable
-import org.jetbrains.exposed.sql.Transaction
-import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransaction
+import org.jetbrains.exposed.v1.dao.IntEntity
+import org.jetbrains.exposed.v1.dao.IntEntityClass
+import org.jetbrains.exposed.v1.core.dao.id.EntityID
+import org.jetbrains.exposed.v1.core.dao.id.IntIdTable
+import org.jetbrains.exposed.v1.jdbc.JdbcTransaction
+import org.jetbrains.exposed.v1.jdbc.transactions.suspendTransaction as jdbcSuspendTransaction
 
 object TaskTable : IntIdTable("task") {
     val name = varchar("name", 50)
@@ -23,8 +22,8 @@ class TaskDAO(id: EntityID<Int>) : IntEntity(id) {
     var priority by TaskTable.priority
 }
 
-suspend fun <T> suspendTransaction(block: Transaction.() -> T): T =
-    newSuspendedTransaction(Dispatchers.IO, statement = block)
+suspend fun <T> suspendTransaction(block: JdbcTransaction.() -> T): T =
+    jdbcSuspendTransaction(statement = block)
 
 
 fun daoToModel(dao: TaskDAO) = Task(

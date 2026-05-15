@@ -8,7 +8,7 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import java.sql.*
 import kotlinx.coroutines.*
-import org.jetbrains.exposed.sql.*
+import org.jetbrains.exposed.v1.jdbc.*
 
 fun Application.configureDatabases(config: ApplicationConfig) {
     val url = config.property("storage.jdbcURL").getString()
