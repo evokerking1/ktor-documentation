@@ -12,8 +12,8 @@
             <b>Used plugins</b>: <a href="server-routing.md"/>,<a href="server-static-content.md">Static Content</a>,
             <a href="server-serialization.md">Content Negotiation</a>, <a href="server-status-pages.md"/>,
             <a href="server-serialization.md">kotlinx.serialization</a>,
-            <a href="https://github.com/ktorio/ktor-plugin-registry/blob/main/plugins/server/org.jetbrains/exposed/2.2/documentation.md">Exposed</a>,
-            <a href="https://github.com/ktorio/ktor-plugin-registry/blob/main/plugins/server/org.jetbrains/postgres/2.2/documentation.md">Postgres</a>
+            <a href="https://github.com/ktorio/ktor-plugin-registry/tree/main/repository/org.jetbrains/server-exposed">Exposed</a>,
+            <a href="https://github.com/ktorio/ktor-plugin-registry/tree/main/repository/org.jetbrains/server-postgres">Postgres</a>
         </p>
     </tldr>
     <card-summary>
@@ -131,13 +131,12 @@
                         button:
                     </p>
                     <list type="bullet">
-                        <li>Routing</li>
                         <li>Content Negotiation</li>
-                        <li>Kotlinx.serialization</li>
+                        <li>kotlinx.serialization</li>
                         <li>Static Content</li>
                         <li>Status Pages</li>
                         <li>Exposed</li>
-                        <li>Postgres</li>
+                        <li>PostgreSQL</li>
                     </list>
                     <p>
                         <img src="ktor_project_generator_add_plugins.gif"

@@ -294,7 +294,7 @@
     <snippet id="download_example">
         <p>
             <b>Code example</b>:
-            <a href="https://github.com/ktorio/ktor-documentation/tree/%ktor_version%/codeSnippets/snippets/%example_name%">
+            <a href="https://github.com/ktorio/ktor-documentation/tree/main/codeSnippets/snippets/%example_name%">
                 %example_name%
             </a>
         </p>
@@ -355,14 +355,6 @@
         </p>
     </snippet>
 
-    <snippet id="generator_project_settings_use_version_catalog">
-        <p>
-            <control>Use version catalog</control>
-            :
-            Select this option to use a version catalog (<path>libs.versions.toml</path>) for managing dependency
-            versions in Gradle and Amper projects. Requires Gradle 7 or later.
-        </p>
-    </snippet>
     <snippet id="generator_project_settings_website">
         <p>
             <control>Website</control>
